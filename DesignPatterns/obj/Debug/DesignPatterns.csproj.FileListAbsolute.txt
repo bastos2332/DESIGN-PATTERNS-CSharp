@@ -1,0 +1,6 @@
+C:\Gabriel\DESIGN-PATTERNS-CSharp\DesignPatterns\bin\Debug\DesignPatterns.exe.config
+C:\Gabriel\DESIGN-PATTERNS-CSharp\DesignPatterns\bin\Debug\DesignPatterns.exe
+C:\Gabriel\DESIGN-PATTERNS-CSharp\DesignPatterns\bin\Debug\DesignPatterns.pdb
+C:\Gabriel\DESIGN-PATTERNS-CSharp\DesignPatterns\obj\Debug\DesignPatterns.csprojAssemblyReference.cache
+C:\Gabriel\DESIGN-PATTERNS-CSharp\DesignPatterns\obj\Debug\DesignPatterns.exe
+C:\Gabriel\DESIGN-PATTERNS-CSharp\DesignPatterns\obj\Debug\DesignPatterns.pdb
