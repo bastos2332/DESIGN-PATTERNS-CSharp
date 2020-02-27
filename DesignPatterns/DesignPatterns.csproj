@@ -43,17 +43,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CalculadorDesconto.cs" />
+    <Compile Include="DescontoPorNumeroItens.cs" />
+    <Compile Include="DescontoPorValorOrcamento.cs" />
+    <Compile Include="IDesconto.cs" />
+    <Compile Include="Items.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Strategy\CalculadorImpostos.cs" />
-    <Compile Include="Strategy\ICCC.cs" />
-    <Compile Include="Strategy\ICMS.cs" />
-    <Compile Include="Strategy\IImposto.cs" />
-    <Compile Include="Strategy\ISS.cs" />
-    <Compile Include="Strategy\Orcamento.cs" />
+    <Compile Include="CalculadorImpostos.cs" />
+    <Compile Include="ICCC.cs" />
+    <Compile Include="ICMS.cs" />
+    <Compile Include="IImposto.cs" />
+    <Compile Include="ISS.cs" />
+    <Compile Include="Orcamento.cs" />
+    <Compile Include="SemDesconto.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

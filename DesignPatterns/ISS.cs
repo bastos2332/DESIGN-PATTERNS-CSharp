@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Strategy
-{
-    class ICMS : IImposto
+
+    class ISS : IImposto
     {
         public double Calcula(Orcamento orcamento)
         {
-            return orcamento.Valor * 0.1;
+            return orcamento.Valor * 0.6;
         }
     }
 
-}
+
+
 

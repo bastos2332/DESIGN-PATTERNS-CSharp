@@ -4,16 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Strategy
-{
-    class ISS : IImposto
+
+    class CalculadorImpostos
     {
-        public double Calcula(Orcamento orcamento)
+        public double CalcularImpostos(Orcamento orcamento, IImposto imposto)
         {
-            return orcamento.Valor * 0.6;
+            return imposto.Calcula(orcamento);
         }
     }
 
 
-}
 
