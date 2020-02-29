@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+namespace DesignPatterns
+{
 
     class ISS : IImposto
     {
@@ -12,6 +14,8 @@ using System.Threading.Tasks;
             return orcamento.Valor * 0.6;
         }
     }
+
+}
 
 
 

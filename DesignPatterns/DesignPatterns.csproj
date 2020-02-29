@@ -46,6 +46,7 @@
     <Compile Include="CalculadorDesconto.cs" />
     <Compile Include="DescontoPorNumeroItens.cs" />
     <Compile Include="DescontoPorValorOrcamento.cs" />
+    <Compile Include="DescontoVendaCasada.cs" />
     <Compile Include="IDesconto.cs" />
     <Compile Include="Items.cs" />
     <Compile Include="Program.cs" />

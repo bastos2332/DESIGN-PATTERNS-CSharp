@@ -4,25 +4,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-class DescontoPorValorOrcamento : IDesconto
+namespace DesignPatterns
 {
-    public IDesconto Desconto { get; set; }
 
-    public double CalcularDesconto(Orcamento orcamento)
+    class DescontoPorValorOrcamento : IDesconto
     {
-       if (orcamento.Valor > 500)
+        public IDesconto Desconto { get; set; }
+        public DescontoPorValorOrcamento (IDesconto proximoDesconto)
         {
-            return orcamento.Valor * 0.01;
-        }else
-        {
-            return this.Desconto.CalcularDesconto(orcamento);
+            this.Desconto = proximoDesconto;
         }
+
+        public double CalcularDesconto(Orcamento orcamento)
+        {
+            if (orcamento.Valor > 500)
+            {
+                return orcamento.Valor * 0.01;
+            }
+            else
+            {
+                return this.Desconto.CalcularDesconto(orcamento);
+            }
+        }
+
+      
     }
 
-    public void SetProximoDesconto(IDesconto desconto)
-    {
-        this.Desconto = desconto;
-    }
+
+
 }
 

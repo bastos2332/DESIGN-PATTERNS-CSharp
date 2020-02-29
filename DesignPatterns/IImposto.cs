@@ -4,11 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+namespace DesignPatterns
+{
 
     interface IImposto
     {
         double Calcula(Orcamento orcamento);
     }
+
+}
 
 
 

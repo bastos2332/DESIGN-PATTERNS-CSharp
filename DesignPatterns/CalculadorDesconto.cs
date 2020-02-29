@@ -4,20 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-class CalculadorDesconto
+namespace DesignPatterns
 {
-    public double Calcular(Orcamento orcamento)
+    class CalculadorDesconto
     {
-        IDesconto descontoItem = new DescontoPorNumeroItens();
-        IDesconto descontoValor = new DescontoPorValorOrcamento();
-        IDesconto SemDesconto = new SemDesconto();
-
-        descontoItem.SetProximoDesconto(descontoValor);
-        descontoValor.SetProximoDesconto(SemDesconto);
-
-        return descontoItem.CalcularDesconto(orcamento);
-
+        public double Calcular(Orcamento orcamento)
+        {
+            IDesconto SemDesconto = new SemDesconto();
+            IDesconto descontoItem = new DescontoPorNumeroItens(SemDesconto);
+            IDesconto descontoValor = new DescontoPorValorOrcamento(descontoItem);
+            IDesconto descontoVendaCasada = new DescontoVendaCasada(descontoValor);
+            return descontoVendaCasada.CalcularDesconto(orcamento);
+        }
     }
 }
+
 

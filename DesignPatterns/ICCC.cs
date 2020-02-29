@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
+namespace DesignPatterns
+{
     class ICCC : IImposto
     {
         public double Calcula(Orcamento orcamento)
@@ -22,4 +23,8 @@ using System.Threading.Tasks;
             return resultado;
         }
     }
+
+
+}
+
 

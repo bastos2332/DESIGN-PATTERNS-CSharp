@@ -4,27 +4,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-class DescontoPorNumeroItens : IDesconto
+namespace DesignPatterns
 {
-    public IDesconto Desconto { get; set; }
-
-    public double CalcularDesconto(Orcamento orcamento)
+    class DescontoPorNumeroItens : IDesconto
     {
-        if(orcamento.Items.Count > 3)
+        public IDesconto Desconto { get; set; }
+        public DescontoPorNumeroItens(IDesconto proximoDesconto)
         {
-            return orcamento.Valor * 0.05;
-        }else
-        {
-            return this.Desconto.CalcularDesconto(orcamento);
+            this.Desconto = proximoDesconto;
         }
+
+        public double CalcularDesconto(Orcamento orcamento)
+        {
+            if (orcamento.Items.Count > 3)
+            {
+                return orcamento.Valor * 0.05;
+            }
+            else
+            {
+                return this.Desconto.CalcularDesconto(orcamento);
+            }
+        }
+
     }
 
-    public void SetProximoDesconto(IDesconto desconto)
-    {
-        this.Desconto = desconto;
-    }
 
-    
 }
 

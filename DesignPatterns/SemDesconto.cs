@@ -4,19 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-class SemDesconto : IDesconto
+namespace DesignPatterns
 {
-    public IDesconto Desconto { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
-    public double CalcularDesconto(Orcamento orcamento)
+    class SemDesconto : IDesconto
     {
-        return 0;
+        public IDesconto Desconto { get; set; }
+        public SemDesconto() {
+
+        }
+        public double CalcularDesconto(Orcamento orcamento)
+        {
+            return 0;
+        }
+
     }
 
-    public void SetProximoDesconto(IDesconto desconto)
-    {
-        
-    }
 }
+
 
